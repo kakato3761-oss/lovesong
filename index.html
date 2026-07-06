@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выходи гулять!</title>
+    <style>
+        :root {
+            --primary: #4facfe;
+            --secondary: #00f2fe;
+            --bg: #f0f8ff;
+            --text: #2b2b2b;
+            --accent: #ff7e5f;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.subtitle {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        main {
+            flex: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 90%;
+        }
+
+        .reasons-list {
+            list-style: none;
+            margin-top: 2rem;
+        }
+
+        .reasons-list li {
+            background: #fff;
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            border-left: 5px solid var(--primary);
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .call-to-action {
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        button.big-btn {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            padding: 1.4rem 2.4rem;
+            font-size: 1.3rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 8px 20px rgba(79, 172, 254, 0.3);
+        }
+
+        button.big-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 28px rgba(79, 172, 254, 0.4);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #777;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Выходи гулять!</h1>
+        <p class="subtitle">Свежий воздух, разговоры и немного приключений — тебя ждёт.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2 style="margin-bottom:1rem;">Почему стоит выйти прямо сейчас:</h2>
+            <ul class="reasons-list">
+                <li>«Дома всё одинаковое, а на улице нет.»</li>
+                <li>«На улице сова на скакалки.»</li>
+                <li>«Я добоеб и ты долбоеб.»</li>
+                <li>«Мне скучно без твоего пиздежа.»</li>
+                <li>«Мне сккучно.»</li>
+            </ul>
+        </section>
+
+        <div class="call-to-action">
+            <button class="big-btn" onclick="alert('Отлично! Жду тебя у подъезда!')">Да, я выйду гулять</button>
+        </div>
+    </main>
+
+    <footer>
+        Твой друг, который очень хочет погулять вместе.
+    </footer>
+</body>
+</html>
